@@ -5,9 +5,9 @@
 package lisp
 
 import (
-	"github.com/pkelchte/tiny-lisp/arith"
 	"fmt"
 	"sync"
+	"tiny-lisp/arith"
 )
 
 // トップレベルの環境

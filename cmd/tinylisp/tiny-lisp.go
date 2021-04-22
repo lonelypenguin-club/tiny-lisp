@@ -1,13 +1,12 @@
-// H25.3/18 - 4/1 (鈴)
+// H25.3/18 - 3/28 (鈴)
 package main
 
 import (
 	"bufio"
 	"fmt"
-	"github.com/pkelchte/tiny-lisp/lisp"
 	"os"
-	"runtime/pprof"
 	"strings"
+	"tiny-lisp/lisp"
 )
 
 // 初期化スクリプト
@@ -56,10 +55,6 @@ func readEvalPrint(line string, done *bool) {
 
 // Lisp スクリプトまたは Lisp 対話セッションを実行する。
 func main() {
-	pf, _ := os.Create("cpu-profile")
-	pprof.StartCPUProfile(pf)
-	defer pprof.StopCPUProfile()
-
 	lisp.ReadAndEval(prelude)
 	n := len(os.Args)
 	if n >= 2 && os.Args[1] != "-" {

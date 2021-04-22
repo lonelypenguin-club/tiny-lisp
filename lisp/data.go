@@ -5,12 +5,12 @@
 package lisp
 
 import (
-	"github.com/pkelchte/tiny-lisp/arith"
 	"fmt"
 	"math/big"
 	"strconv"
 	"strings"
 	"sync"
+	"tiny-lisp/arith"
 )
 
 // 任意の型.

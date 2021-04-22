@@ -5,12 +5,12 @@
 package lisp
 
 import (
-	"github.com/pkelchte/tiny-lisp/arith"
 	"fmt"
 	"io"
 	"strconv"
 	"strings"
 	"text/scanner"
+	"tiny-lisp/arith"
 	"unicode"
 )
 
@@ -126,7 +126,7 @@ func parseNumber(lex *Lex) (arith.Number, string) {
 			if t == scanner.Int {
 				num2, ok := NumberFor(text2)
 				if ok {
-					r, ok = peekAndTest(lex)
+					_, ok = peekAndTest(lex)
 					if ok {
 						return arith.DivideReal(num, num2), ""
 					}
